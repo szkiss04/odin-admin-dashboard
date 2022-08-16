@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: "Roboto", sans-serif;
+    --sidebar-bg-color: rgb(69, 143, 206);
+    --sidebar-font-color: white;
+    --header-bg-color: white;
+    --main-bg-color: rgb(227, 232, 239);
+    --header-drop-shadow: .25rem .25rem .25rem .25rem rgb(182, 182, 182);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 3fr 1fr;
+    grid-template-areas:
+        "s h h"
+        "s m m"; 
+}
+
+.sidebar {
+    grid-area: s;
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-font-color);
+    z-index: 2;
+}
+
+.header {
+    grid-area: h;
+    background-color: var(--header-bg-color);
+    box-shadow: var(--header-drop-shadow);
+    z-index: 1;
+}
+
+.main {
+    grid-area: m;
+    background-color: var(--main-bg-color);
+    z-index: 0;
+}
