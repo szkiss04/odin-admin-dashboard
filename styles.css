@@ -12,7 +12,8 @@
     --sidebar-font-color: white;
     --header-bg-color: white;
     --main-bg-color: rgb(227, 232, 239);
-    --header-drop-shadow: .25rem .25rem .25rem .25rem rgb(182, 182, 182);
+    --header-drop-shadow: 2px 2px 2px 2px rgb(182, 182, 182);
+    --main-font-color: black;
 }
 
 .container {
@@ -34,9 +35,105 @@
 
 .header {
     grid-area: h;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     background-color: var(--header-bg-color);
     box-shadow: var(--header-drop-shadow);
     z-index: 1;
+    row-gap: 1rem;
+}
+
+.header > .searchbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 1.25rem;
+}
+
+#searchbar {
+    border: none;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 80%;
+    height: 1.5rem;
+    background-color: var(--main-bg-color);
+}
+
+.user-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    font-weight: bold;
+}
+
+.user-info > .avatar {
+    width: 2rem;
+    height: 2rem;
+}
+
+h2 {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.user-welcome {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-welcome > .avatar {
+    width: 3rem;
+    height: 3rem;
+}
+
+.text-container p {
+    font-weight: bold;
+}
+
+.text-container p:first-of-type {
+    font-size: .75rem;
+}
+
+.text-container p:last-of-type {
+    font-size: 1.25rem;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-group > button {
+    border: none;
+    border-radius: 0.825rem;
+    height: 1.75rem;
+    width: 5rem;
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-font-color);
 }
 
 .main {
